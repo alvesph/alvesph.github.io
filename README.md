@@ -1,3 +1,3 @@
 # Meu Portifólio online
 
-* link para o portfólio - https://alvesph.github.io/portfolio/
+* link para o portfólio - alvesph.github.io
