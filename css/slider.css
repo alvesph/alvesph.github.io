@@ -1,0 +1,33 @@
+.body {
+  width: 100%;
+  max-width: var(--maxWidth);
+  background: var(--colorBody);
+}
+
+#items {
+  display: flex;
+  
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+.item {
+  flex: none;
+
+  width: 100%;
+  height: 500px;
+  
+  flex-shrink: 0;
+  scroll-snap-align: start;
+
+  pointer-events: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}

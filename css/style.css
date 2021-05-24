@@ -1,232 +1,141 @@
-html, body {
-    box-sizing: border-box;
-    background: rgb(151, 109, 219);
+* {
     margin: 0;
     padding: 0;
-    list-style: none;
-    font-family: monospace;
-    font-size: 20px;
+    outline: 0;
+    box-sizing: border-box;
 }
 
-.separador {
-    width:100%;
-    min-width: 900px;
-    border-top: 1px solid #000;
-    list-style-type: none;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-
-}
-
-img {
-    padding-top: 10px;
-    padding-left: 9px;
+:root {
+    --colorBackground: #7159c1;
+    --colorHead: rgb(0, 0, 0);
+    --colorTitle: black;
+    --colorBody: rgb(54, 54, 58);
     
+    --colortxtTitle: rgb(209, 209, 194);
+    --colortxtCode: rgb(209, 209, 194);
+
+    --maxWidth: 920px;
 }
 
-#img > img {
-    border-radius: 100%;
-    height: 200px;
-    object-fit: cover;
-    width: 200px;  
-}
-
-.menu {
-    max-width: 1080px;
-    margin: 0 auto;
-    padding: 0 2%;
-}
-
-header {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    padding: 9px 0;
-    text-align: right;
-    background: black;
-}
-
-header li{
-    display: inline-block;
-    margin: 0 10px;
-}
-
-header a{
-    text-decoration: none;
-    color: white;
+h3 {
+    color: var(--colortxtTitle);
+    font-family: monospace;
 }
 
 p {
-    list-style: none;
-    font-size: 15px;
-    margin: 10px;
-    color: rgb(185, 180, 180);
+    color: var(--colortxtCode);
+    font-family: monospace;
+    font-size: 12px;
+    margin-top: 10px;
 }
 
-b {
-    color: rgb(127, 60, 158)
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    background: var(--colorBackground);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
 }
 
-/* CSS FLEXBOX */
-
-.corpo {
-    display: grid;
-    grid-template-columns: 0.1fr 2.5fr;
-    max-width: 1081px;
-    min-width: 900px;
-    box-shadow: 5px 10px 10px #2b2929;
-    margin: 0 auto;
-
+html, body {
+    height: 100%;
+    width: 100%;
 }
 
-.corpo1 {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-auto-flow: dense;
-    max-width: 1080px;
-    min-width: 900px;
-    background: rgb(54, 54, 58);
-    box-shadow: 5px 10px 10px #2b2929;
-    padding-top: 10px;
-    margin: 0 auto;
-}
-.rob {
-    display: grid;
-    max-width: 1080px;
-    min-width: 900px;
-    padding-top: 15px;
-    padding-bottom: 10px;
-    height: 600px;
-    margin: 0 auto;
-}
-
-.quadro {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    max-width: 1080px;
-
-}
-
-#quadroPic {
-    max-width: 195px;
-    height: 150px;
-    position: relative;
-    border: solid 3px rgb(120, 255, 9);
-    left: 190px;
-    top: 290px;
-    animation: quadroMusic 3s 2s;
-}
-
-#quadroMusic {
-    width: 195px;
-    height: 150px;
-    position: relative;
-    border: solid 3px rgb(120, 255, 9);
-    left: 40px;
-    top: 430px;
-    animation: quadroMusic 3s 2s;
-}
-
-
-#quadroBola {
-    max-width: 325px;
-    height: 400px;
-    position: relative;
-    border: solid 3px rgb(120, 255, 9);
-    left: 18x;
-    top: 100px;
-    animation: quadroBol 3s 2s;
-}
-
-
-.apresentacao {
-    display: grid;
-    grid-template-columns: 3fr 0.5fr 0.5fr 0.5fr 0.5fr;   
-    align-items: center;
-    max-width: 1080px;
-    min-width: 900px;
-    margin: 0 auto;
-}
-
-.play {
-    background: grey;
-}
-
-.py {
-    background: #1b1a1a;
-}
-
-
-#home {
-    background: rgb(54, 54, 58);
-    padding-left: 20px;
-
-}
-.sobre{
-    grid-template-columns: 1.5fr 1fr;
-    padding-left: 20px;
-    background: rgb(54, 54, 58);
-    max-width: 1080px;
-    min-width: 360px;
-    color: white;
-    display: grid;
-    margin: 0 auto;
-}
-
-.habilidade{
-    background: rgb(54, 54, 58);
-}
-
-.progress {
-    background: rgba(255,255,255,0.1);
-    justify-content: flex-start;
-    align-items: center;
-    position: relative;
-    padding: 0 5px;
+.Head {
+    width: 100%;
+    background: var(--colorHead);
+    height: 50px;
+    position: fixed;
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu {
     height: 40px;
-    width: 500px;
-}
-.anima {
-    padding-left: 20px;
-    color: rgb(185, 180, 180);
-}
-
-.progress-value {
-    animation: load 3s normal forwards;
-    box-shadow: 0 10px 40px -13px #fff;
-    background: #fff;
-    height: 30px;
-    width: 0;
+    width: 100%;
+    max-width: var(--maxWidth);
+    margin: 2px;
+    /* background: yellow; */
 }
 
-@keyframes load {
-    0% { width: 0; }
-    100% { width: 80%; }
-    {margin: 0 auto;}
-}
-.progresso1 {
-    display: grid;
-    color: rgb(185, 180, 180);
-    padding-left: 20px;
-    grid-template-columns: 1fr 3fr;
-}
-#progresso {
-    width: 1px;
-    height: 20px;
-    background-color: white;
-    animation: slidein 3s infinite;
+#logo{
+    border-radius: 50px;
+    width: 35px;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
 }
 
-@keyframes slidein {
-    to {
-        transform: rotate(750deg);
-    }
-    from {
-        transform: rotate(0deg);
-    }
+#space {
+    height: 50px;
+    background: blue;
 }
+
+section {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    padding: 4px;
+}
+
+.Container { 
+    width: 100%;
+    max-width: var(--maxWidth);
+    display: flex;
+    flex-direction: column;
+    margin: 4px;
+}
+
+#head-title {
+    height: 35px;
+    background:rgb(54, 54, 58);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+#head-title h3 {
+    margin: 9px 9px;
+}
+
+#title {
+    width: 100%;
+    height: 40px;
+    max-width: var(--maxWidth);
+    background: var(--colorTitle);
+    display: flex;
+}
+
+#play {
+    width: 35px;
+    border-top-left-radius: 8px;
+    /* background-color: rgb(68, 65, 63);    */
+}
+
+#playImg {
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+    margin: 6px 6px;
+    background: rgb(173, 170, 168);
+    background-image: url(/img/colchetes.png);
+    cursor: pointer;
+}
+
+#playImg:hover {
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+    margin: 6px 6px;
+    background: rgb(173, 170, 168);
+    background-image: url(/img/play1.png);
+}
+
+#text {
+    margin: 0 10px;
+}
+
