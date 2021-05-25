@@ -1,7 +1,7 @@
 .body {
   width: 100%;
   max-width: var(--maxWidth);
-  background: var(--colorBody);
+  /* background: var(--colorBody); */
 }
 
 #items {
