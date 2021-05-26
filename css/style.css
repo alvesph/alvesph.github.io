@@ -9,7 +9,7 @@
     --colorBackground: #fafaef;
     --colorHead: rgb(0, 0, 0);
     --colorTitle: black;
-    --colorBody: rgb(54, 54, 58);
+    --colorBody: rgb(85, 85, 90);
     
     /* #7159c1 */
 
@@ -34,7 +34,7 @@ h3 {
 }
 
 #description {
-    color: rgb(73, 73, 73);
+    color: var(--colorBody);
     font-size: 15px;
     font-family: monospace;
     margin-top: 10px;
@@ -130,7 +130,7 @@ section {
     flex-direction: column;
     justify-content: top;
     align-items: center;
-    padding: 4px;
+    padding: 8px;
 }
 
 .Container { 
@@ -139,11 +139,12 @@ section {
     display: flex;
     flex-direction: column;
     margin: 4px;
+    
 }
 
 #head-title {
     height: 35px;
-    background:rgb(54, 54, 58);
+    background: var(--colorBody);
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 }
@@ -206,16 +207,124 @@ section {
 }
 
 #about-me1 {
-    width: 60%;
+    width: 70%;
     flex: 1 1 400px;
     margin-bottom: 25px;
 }
 
 #about-me2 {
-    width: 40%;
+    width: 30%;
     height: 500px;
     flex: 1 1 400px;
     border-radius: 15px;
-    background: brown;
+    background: rgb(0, 0, 0);
+    box-shadow: 0px 5px 20px #000;
 }
 
+.animation-cub {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.animation-cub > div {
+    width: 25%;
+    height: 25%;
+    border-radius: 15%;
+
+    transition-property: background-color, border-radius;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+
+}
+
+.cub1 {
+    animation-name: move;
+    animation-duration: 3s;
+    transition-timing-function: ease-in;
+    animation-delay: 1s;
+    animation-iteration-count: 3;
+}
+
+.cub2 {
+    animation-name: move;
+    animation-duration: 3s;
+    transition-timing-function: ease-in;
+    animation-delay: 2s;
+    animation-iteration-count: 3;
+}
+
+.cub3 {
+    animation-name: move;
+    animation-duration: 3s;
+    transition-timing-function: ease-in;
+    animation-delay: 3s;
+    animation-iteration-count: 3;
+}
+
+.cub4 {
+    animation-name: move;
+    animation-duration: 3s;
+    transition-timing-function: ease-in;
+    animation-delay: 4s;
+    animation-iteration-count: 3;
+}
+
+.animation-cub > div:hover {
+    cursor: pointer;
+    background-color: white;
+    border-radius: 0px;
+}
+
+@keyframes move {
+    from {
+        background-color: brown;
+        border-radius: 15px;
+        /* background-image: url(/img/colchetes.png); */
+    }
+    to {
+        background-color: white;
+        border-radius: 0px;
+        /* background-image: url(/img/play1.png); */
+    }  
+}
+
+.portfolio-about {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.photo {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    flex: 1 1 300px;
+}
+
+.photo > div {
+    width: 90%;
+    height: 80%;
+    box-shadow: 0px 5px 20px #000;
+}
+
+.photo-description {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 300px;
+}
+
+.photo-description > h3 {
+    width: 90%;
+    color: black;
+}
+
+.photo-description > p {
+    width: 90%;
+}

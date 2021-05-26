@@ -1,12 +1,13 @@
 .body {
   width: 100%;
   max-width: var(--maxWidth);
+  
   /* background: var(--colorBody); */
 }
 
 #items {
   display: flex;
-  
+
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
@@ -15,9 +16,9 @@
 
 .item {
   flex: none;
-
+  
   width: 100%;
-  height: 500px;
+  /* height: 500px; */
   
   flex-shrink: 0;
   scroll-snap-align: start;
