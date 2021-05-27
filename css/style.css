@@ -21,12 +21,14 @@
 
 
 a {
-    color: red;
+    color: black;
     text-decoration: none;
+    font-weight: bolder;
 }
 
 a:hover {
     background: rgba(0, 0, 0, .05);
+    cursor: pointer;
 }
 
 h2 {
@@ -71,9 +73,12 @@ p {
     }
 }
 
+/* font-family: 'Carrois Gothic SC', sans-serif;
+font-family: 'Didact Gothic', sans-serif;
+font-family: 'Pathway Gothic One', sans-serif; */
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Pathway Gothic One', sans-serif;
     font-size: 14px;
     background: var(--colorBackground);
     text-rendering: optimizeLegibility;
@@ -260,6 +265,7 @@ section {
 
 #head-title h3 {
     margin: 9px 9px;
+    /* font-family: 'Carrois Gothic SC', sans-serif; */
 }
 
 #title {
@@ -302,11 +308,97 @@ section {
 
 .body-portfolio{
     width: 100%;
-    background: var(--colorBody);
+    height: 100%; 
+    display: flex;
 }
 
-.about {
+.skils {
+    display: flex;
+    flex-wrap: wrap;
+}
 
+#theme {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    gap: .5rem;
+}
+
+#works {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: .5rem;
+    margin: 20px 0px 30px;
+}
+
+#works > div {
+    margin-top: 10px;
+    width: 170px;
+    height: 250px;
+    background-color: brown;
+    box-shadow: 2px 5px 2px #000;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url(/img/about/2.jpg); */
+
+    transition-property: width, height;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out; 
+}
+
+#works > div:hover {
+    width: 185px;
+
+}
+
+#banner {
+    width: 110px;
+    height: 110px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+
+    transition-property: width, height, border-radius, background-color;
+    transition-duration: .5s;
+    transition-timing-function: ease-in-out; 
+   
+}
+
+#b1 {
+    background-image: url(/img/about/2.jpg);
+}
+
+#area {
+    color: gray;
+}
+
+.work:hover {
+    cursor: pointer;
+}
+
+.work:hover #banner {
+    width: 0px;
+    height: 0px;
+}
+
+.work:hover > div > div {
+    font-size: 0px;
+}
+
+
+.about {
     height: 100%;
     max-width: var(--maxWidth);
     display: flex;
@@ -336,12 +428,15 @@ section {
     height: 100%;
     display: flex;
     flex-wrap: wrap;
+
 }
 
 .animation-cub > div {
     width: 25%;
     height: 25%;
     border-radius: 15%;
+    justify-content: center;
+    align-items: center;
 
     transition-property: background-color, border-radius;
     transition-duration: 1s;
@@ -350,6 +445,31 @@ section {
 }
 
 .cub1 {
+    display: flex;
+    color: white;
+    font-size: 100px;
+    animation-name: move;
+    animation-duration: 3s;
+    transition-timing-function: ease-in;
+    animation-delay: 1s;
+    animation-iteration-count: 3;
+}
+
+.cub2 {
+    display: flex;
+    color: white;
+    font-size: 100px;
+    animation-name: move;
+    animation-duration: 3s;
+    transition-timing-function: ease-in;
+    animation-delay: 2s;
+    animation-iteration-count: 3;
+}
+
+.cub3 {
+    display: flex;
+    color: white;
+    font-size: 100px;
     animation-name: move;
     animation-duration: 3s;
     transition-timing-function: ease-in;
@@ -357,7 +477,10 @@ section {
     animation-iteration-count: 3;
 }
 
-.cub2 {
+.cub4 {
+    display: flex;
+    color: white;
+    font-size: 100px;
     animation-name: move;
     animation-duration: 3s;
     transition-timing-function: ease-in;
@@ -365,23 +488,9 @@ section {
     animation-iteration-count: 3;
 }
 
-.cub3 {
-    animation-name: move;
-    animation-duration: 3s;
-    transition-timing-function: ease-in;
-    animation-delay: 5s;
-    animation-iteration-count: 3;
-}
-
-.cub4 {
-    animation-name: move;
-    animation-duration: 3s;
-    transition-timing-function: ease-in;
-    animation-delay: 6s;
-    animation-iteration-count: 3;
-}
-
 .animation-cub > div:hover {
+    background-image: url(/img/pixel_art.png);
+    font-size: 0px;
     cursor: pointer;
     background-color: white;
     border-radius: 0px;
@@ -389,14 +498,16 @@ section {
 
 @keyframes move {
     from {
+        /* background-image: url(/img/mamut1.png); */
+        color: black;
         background-color: brown;
         border-radius: 15px;
-        /* background-image: url(/img/colchetes.png); */
     }
     to {
+        color: brown;
+        /* background-image: url(/img/pixel_art.png); */
         background-color: white;
         border-radius: 0px;
-        /* background-image: url(/img/play1.png); */
     }  
 }
 
@@ -424,6 +535,7 @@ section {
 .photo-description {
     width: 50%;
     display: flex;
+    
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -433,8 +545,10 @@ section {
 .photo-description > h3 {
     width: 90%;
     color: black;
+    font-family: 'Didact Gothic', sans-serif;
 }
 
 .photo-description > p {
     width: 90%;
+    font-family: 'Didact Gothic', sans-serif;
 }
