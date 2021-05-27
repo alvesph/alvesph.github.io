@@ -1,70 +1,47 @@
-$(function olha() {
-	
-	$('#toggle-sobre').click(function(){
-		$('#sobre').slideToggle('slow');
-	});
+const btnMobile = document.querySelector('#btn-mobile');
 
-	$('#so').click(function(){
-		$('#sobre').slideDown('slow');
-	});
-
-});
-
-$(function tentar() {
-	$('#sobre').slideUp('fast');
-});
-
-$(function exibir() {
-	document.getElementById("about").style.display = "none";
-	document.getElementById("progresso").style.display = "none";
-	document.getElementById("animatexto1").style.display = "none";
-	document.getElementById("animatexto2").style.display = "none";
-	document.getElementById("animatexto3").style.display = "none";
-	document.getElementById("animatexto4").style.display = "none";
-});
-
-window.onload = function mostrar(){
-	document.getElementById("animatexto1").style.display = "block";
-
-	setInterval(function() {
-		document.getElementById("animatexto2").style.display = "block";
-	}, 500);
-	setInterval(function() {
-		document.getElementById("animatexto3").style.display = "block";
-	}, 1000);
-	setInterval(function() {
-		document.getElementById("animatexto4").style.display = "block";
-	}, 1500);
-	setInterval(function() {
-		document.getElementById("progresso").style.display = "block";
-	}, 2000);
-
-
-	setInterval(function() {
-		document.getElementById("about").style.display = "block";
-	}, 1000);
+function toggleMenu(event) {
+  if (event.type === 'touchstart') event.preventDefault();
+  const nav = document.querySelector('#nav');
+  nav.classList.toggle('active');
+  const active = nav.classList.contains('active');
+  event.currentTarget.setAttribute('aria-expanded', 'active');
+  if (active) {
+    event.currentTarget.setAttribute('aria-label', 'Fechar Menu');
+  } else {
+    event.currentTarget.setAttribute('aria-label', 'Abrir Menu');
+  }
 }
 
+btnMobile.addEventListener('click', toggleMenu);
+btnMobile.addEventListener('touchstart', toggleMenu);
 
-$('.menu a[href^="#"]').on('click', function(e) {
-	e.preventDefault();
-	var id = $(this).attr('href'),
-			targetOffset = $(id).offset().top;
-			
-	$('html, body').animate({ 
-		scrollTop: targetOffset - 100
-	}, 500);
+
+function typeWriter(elemento) {
+  const textArray = elemento.innerHTML.split('');
+  elemento.innerHTML='';
+  textArray.forEach((leter,i) => {
+    setTimeout(() => elemento.innerHTML += leter, 75 * i) 
+  });
+}
+
+const title = document.querySelector('#typeText');
+const title1 = document.querySelector('#typeText1');
+const title2 = document.querySelector('#typeText2');
+const title3 = document.querySelector('#typeText3');
+
+$("#typeText").one('mouseover', function () {
+  typeWriter(title);
 });
 
-$(function(){   
-	var nav = $('.header');   
-	$(window).scroll(function () { 
-		if ($(this).scrollTop() > 150) { 
-			nav.addClass("menu-fixo");
-			$('teste').css('padding-top', 50);
-		} else { 
-			nav.removeClass("menu-fixo"); 
-			$('teste').css('padding-top', 0);
-		} 
-	});  
+$("#typeText1").one('mouseover', function () {
+  typeWriter(title1);
+});
+
+$("#typeText2").one('mouseover', function () {
+  typeWriter(title2);
+});
+
+$("#typeText3").one('mouseover', function () {
+  typeWriter(title3);
 });

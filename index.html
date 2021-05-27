@@ -15,17 +15,25 @@
 </head>
 <body>
     <div class="Head">
-        <div class="menu">`
+
+        <div class="header">`
             <div class="logoArea">
-                <img class="logo" src="/img/logo.png" alt="">
+                <a href="/"><img class="logo" src="/img/logo.png" alt=""></a>
             </div>
-            <div class="name">PAULO H. ALVES</div>
-            <div class="redes">
-                <div class="rede"><img src="/img/redes/rsl.png"/></div>
-                <div class="rede"><img src="/img/redes/rst.png"/></div>
-                <div class="rede"><img src="/img/redes/rsw.png"/></div>
-                <div class="rede"><img src="/img/redes/rsf.png"/></div>
+            <div class="name">
+                <div>PAULO H.ALVES</div>
             </div>
+            <nav id="nav">
+                <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">Menu
+                    <span id="btn-hamburger"></span>
+                </button>
+                <ul id="menu" role="menu">
+                    <li><a href="/">Sobre</a></li>
+                    <li><a href="/">Qualificação</a></li>
+                    <li><a href="/">Habilidades</a></li>
+                </ul>
+            </nav>
+ 
         </div>
     </div>
     <div id="space"></div>
@@ -69,7 +77,7 @@
                     </div>
                 </div>
                 <div id="text">
-                    <p>1 <span>pip install</span> Portfólio</p>
+                    <p onmouseover="mouseOver()" class="blink" id="typeText">1 pip install Portfólio</p>
                 </div>
             </div>
             <div class="body-portfolio">
@@ -85,7 +93,7 @@
                     <div id="playImg"></div>
                 </div>
                 <div id="text">
-                    <p>1 <span>from</span> Portfolio <span>import</span> Sobre</p>
+                    <p onmouseover="mouseOver()" class="blink" id="typeText1">1 from Portfolio import Sobre</p>
                 </div>
             </div>
             <div class="body">
@@ -127,7 +135,7 @@
                     <div id="playImg"></div>
                 </div>
                 <div id="text">
-                  <p>1 Portfolio <span>import</span> Qualificação</p>
+                  <p onmouseover="mouseOver()" class="blink" id="typeText2">1 Portfolio import Qualificação</p>
                 </div>
             </div>
         </div>
@@ -140,7 +148,7 @@
                     <div id="playImg"></div>
                 </div>
                 <div id="text">
-                    <p>1 <span>from</span> Portfolio <span>import</span> Habilidade</p>
+                    <p onmouseover="mouseOver()" class="blink" id="typeText3">1 from Portfolio import Habilidade</p>
                 </div>
             </div>
         </div>
@@ -158,6 +166,6 @@
             </div>
         </div>
     </section>
-    <script type="text/javascript" src="/js/slider.js"></script>
+    <script type="text/javascript" src="/js/script.js"></script>
 </body>
 </html>

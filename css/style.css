@@ -19,8 +19,14 @@
     --maxWidth: 1080px;
 }
 
-span{
-    color: rgb(238, 39, 39);
+
+a {
+    color: red;
+    text-decoration: none;
+}
+
+a:hover {
+    background: rgba(0, 0, 0, .05);
 }
 
 h2 {
@@ -47,6 +53,25 @@ p {
     margin-top: 10px;
 }
 
+
+.blink::after  {
+    content: '|';
+    margin-left: 5px;
+    opacity: 1;
+    animation: blink .7s infinite ;
+}
+
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
@@ -72,7 +97,7 @@ html, body {
     box-shadow: 0px 5px 20px #000;
 }
 
-.menu {
+.header {
     height: 40px;
     width: 100%;
     max-width: var(--maxWidth);
@@ -81,31 +106,8 @@ html, body {
     align-items: center;
 }
 
-.name {
-    width: 60%;
-    color: var(--colortxtTitle);
-    font-family: monospace;
-    font-size: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.redes {
-    width: 25%;
-    color: var(--colortxtTitle);
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-}
-
-.rede {
-    width: 40px;
-    height: 40px;
-}
-
 .logoArea {
-    width: 15%;
+    width: 10%;
     color: var(--colortxtTitle);
     display: flex;
     flex-direction: row;
@@ -117,6 +119,112 @@ html, body {
     border-radius: 50px;
     width: 35px;
     height: 35px;
+}
+
+.name {
+    width: 60%;
+    color: var(--colortxtTitle);
+    font-family: monospace;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav {
+    width: 30%;
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+}
+
+#menu {
+    display: flex;
+    list-style: none;
+    gap: .5rem;
+    width: 100%;
+    height: 40px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menu a {
+    display: block;
+    padding: .5rem;
+    font-size: 1rem;
+    color: white;
+}
+
+
+#btn-mobile {
+    display: none;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    
+    #menu {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 50px;
+        right: 0px;
+        background: #e7e7e7;
+        
+        transition: .6s;
+        height: 0px;
+        z-index: 1000;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+    #nav.active #menu {
+        height: calc(100vh - 50px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+    #menu a {
+        padding: 1rem 0;
+        margin: 0 2rem;
+        border-bottom: 2px solid rgba(0, 0, 0, .05);
+        font-size: 1.5rem;
+        color: black;
+    }
+    #btn-mobile {
+        display: flex;
+        padding: .5rem 0.5rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: .5rem; 
+
+    }
+    #btn-hamburger {
+        color: white;
+        border-top: 2px solid;
+        width: 20px;
+    }
+    #btn-hamburger::after, #btn-hamburger::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
+    #nav.active #btn-hamburger {
+        border-top-color: transparent;
+
+    }
+    #nav.active #btn-hamburger::before {
+        transform: rotate(135deg);
+    }
+    #nav.active #btn-hamburger::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
 }
 
 #space {
@@ -196,25 +304,25 @@ section {
 }
 
 .about {
-    /* width: 100%; */
+
     height: 100%;
     max-width: var(--maxWidth);
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin: 50px 0px 50px;
+    margin: 50px 20px 50px;
     /* background: yellow; */
 }
 
 #about-me1 {
-    width: 70%;
-    flex: 1 1 400px;
+    width: 80%;
+    flex: 3 1 300px;
     margin-bottom: 25px;
 }
 
 #about-me2 {
-    width: 30%;
-    height: 500px;
+    width: 20%;
+    height: 400px;
     flex: 1 1 400px;
     border-radius: 15px;
     background: rgb(0, 0, 0);
@@ -243,7 +351,7 @@ section {
     animation-name: move;
     animation-duration: 3s;
     transition-timing-function: ease-in;
-    animation-delay: 1s;
+    animation-delay: 3s;
     animation-iteration-count: 3;
 }
 
@@ -251,7 +359,7 @@ section {
     animation-name: move;
     animation-duration: 3s;
     transition-timing-function: ease-in;
-    animation-delay: 2s;
+    animation-delay: 4s;
     animation-iteration-count: 3;
 }
 
@@ -259,7 +367,7 @@ section {
     animation-name: move;
     animation-duration: 3s;
     transition-timing-function: ease-in;
-    animation-delay: 3s;
+    animation-delay: 5s;
     animation-iteration-count: 3;
 }
 
@@ -267,7 +375,7 @@ section {
     animation-name: move;
     animation-duration: 3s;
     transition-timing-function: ease-in;
-    animation-delay: 4s;
+    animation-delay: 6s;
     animation-iteration-count: 3;
 }
 
