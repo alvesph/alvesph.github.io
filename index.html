@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/style-slider.css">
+    <link rel="stylesheet" href="css/style-stories.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
     <title>PORTFÓLIO - ALVES, PH</title>
@@ -101,7 +102,25 @@
                     <div class="item">
                         <div class="portfolio-about">
                             <div class="photo">
-                                <div><img src="/img/perfil.jpg"/></div>
+
+
+                                <div data-slide="slide" class="slide">
+                                    <div class="slide-items">
+                                      <img src="/img/perfil.jpg" alt="Img 1">
+                                      <img src="/img/about/2.jpg" alt="Img 2">
+                                      <img src="/img/about/3.jpg" alt="Img 3">
+                                      <img src="/img/about/4.jpg" alt="Img 4">
+                                    </div>
+                                    <nav class="slide-nav">
+                                      <div class="slide-thumb"></div>
+                                      <button class="slide-prev">Anterior</button>
+                                      <button class="slide-next">Próximo</button>
+                                    </nav>
+                                </div>
+
+                                <!-- <div><img src="/img/perfil.jpg"/></div> -->
+
+
                             </div>
                             <div class="photo-description">
                                 <h3>Lorem Ipsum is simply dummy text of the printing and 
@@ -120,7 +139,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item"><img src="/img/about/2.jpg"/></div>
+                    <div class="item"><img src="/img/robs.jpg"/></div>
                     <div class="item"><img src="/img/about/3.jpg"/></div>
                     <div class="item"><img src="/img/about/4.jpg"/></div>
                 </div>
