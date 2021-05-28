@@ -108,3 +108,55 @@ class SlideStories {
 }
 
 new SlideStories('slide');
+
+
+var btn = document.querySelector("#btn");
+btn.addEventListener("click", function() {
+    var div = document.querySelectorAll(".dev");
+    var edu = document.querySelectorAll(".edu");
+    var nn = document.querySelector(".criativite");
+
+    nn.style.display = "none";
+
+for (i = 0; i < div.length; i++){
+  div[i].style.display = "flex";
+}
+
+for (i = 0; i < edu.length; i++){
+  edu[i].style.display = "none";
+}
+});
+
+var btn = document.querySelector("#btn-edu");
+btn.addEventListener("click", function() {
+    var div = document.querySelectorAll(".dev");
+    var edu = document.querySelectorAll(".edu");
+    var nn = document.querySelector(".criativite");
+
+    nn.style.display = "none";
+
+for (i = 0; i < div.length; i++){
+  div[i].style.display = "none";
+}
+
+for (i = 0; i < edu.length; i++){
+  edu[i].style.display = "flex";
+}
+});
+
+var btn = document.querySelector("#btn-all");
+btn.addEventListener("click", function() {
+    var div = document.querySelectorAll(".dev");
+    var edu = document.querySelectorAll(".edu");
+    var nn = document.querySelector(".criativite");
+
+    nn.style.display = "flex";
+
+for (i = 0; i < div.length; i++){
+  div[i].style.display = "flex";
+}
+
+for (i = 0; i < edu.length; i++){
+  edu[i].style.display = "flex";
+}
+});
