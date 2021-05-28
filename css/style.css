@@ -482,12 +482,12 @@ section {
 .animation-cub > div {
     width: 25%;
     height: 25%;
-    border-radius: 15%;
+    border-radius: 30%;
     justify-content: center;
     align-items: center;
 
     transition-property: background-color, border-radius;
-    transition-duration: 1s;
+    transition-duration: .5s;
     transition-timing-function: ease-in-out;
 
 }
@@ -498,7 +498,7 @@ section {
     font-size: 100px;
     animation-name: move;
     animation-duration: 3s;
-    transition-timing-function: ease-in;
+    transition-timing-function: ease-in-out;
     animation-delay: 1s;
     animation-iteration-count: 3;
 }
@@ -509,7 +509,7 @@ section {
     font-size: 100px;
     animation-name: move;
     animation-duration: 3s;
-    transition-timing-function: ease-in;
+    transition-timing-function: ease-in-out;
     animation-delay: 2s;
     animation-iteration-count: 3;
 }
@@ -520,7 +520,7 @@ section {
     font-size: 100px;
     animation-name: move;
     animation-duration: 3s;
-    transition-timing-function: ease-in;
+    transition-timing-function: ease-in-out;
     animation-delay: 3s;
     animation-iteration-count: 3;
 }
@@ -531,13 +531,13 @@ section {
     font-size: 100px;
     animation-name: move;
     animation-duration: 3s;
-    transition-timing-function: ease-in;
+    transition-timing-function: ease-in-out;
     animation-delay: 4s;
     animation-iteration-count: 3;
 }
 
 .animation-cub > div:hover {
-    background-image: url(/img/pixel_art.png);
+    /* background-image: url(/img/pixel_art.png); */
     font-size: 0px;
     cursor: pointer;
     background-color: white;
@@ -545,14 +545,32 @@ section {
 }
 
 @keyframes move {
-    from {
+    0% {
         /* background-image: url(/img/mamut1.png); */
-        color: black;
-        background-color: brown;
-        border-radius: 15px;
-    }
-    to {
         color: brown;
+        background-color: brown;
+        border-radius: 30px;
+    }
+    25% {
+        color: brown;
+        /* background-image: url(/img/pixel_art.png); */
+        background-color: rgb(230, 137, 137);
+        border-radius: 25px;
+    }  
+    50% {
+        color: brown;
+        /* background-image: url(/img/pixel_art.png); */
+        background-color: rgb(245, 207, 207);
+        border-radius: 15px;
+    }  
+    75% {
+        color: brown;
+        /* background-image: url(/img/pixel_art.png); */
+        background-color: rgb(245, 220, 220);
+        border-radius: 10px;
+    }  
+    100% {
+        color: rgb(0, 0, 0);
         /* background-image: url(/img/pixel_art.png); */
         background-color: white;
         border-radius: 0px;
