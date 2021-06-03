@@ -26,24 +26,11 @@ function typeWriter(elemento) {
 }
 
 const title = document.querySelector('#typeText');
-const title1 = document.querySelector('#typeText1');
-const title2 = document.querySelector('#typeText2');
-const title3 = document.querySelector('#typeText3');
+
 
 $("#typeText").one('mouseover', function () {
   typeWriter(title);
-});
-
-$("#typeText1").one('mouseover', function () {
-  typeWriter(title1);
-});
-
-$("#typeText2").one('mouseover', function () {
-  typeWriter(title2);
-});
-
-$("#typeText3").one('mouseover', function () {
-  typeWriter(title3);
+  clearTimeout(typeWriter)
 });
 
 
@@ -114,9 +101,6 @@ var btn = document.querySelector("#btn");
 btn.addEventListener("click", function() {
     var div = document.querySelectorAll(".dev");
     var edu = document.querySelectorAll(".edu");
-    var nn = document.querySelector(".criativite");
-
-    nn.style.display = "none";
 
 for (i = 0; i < div.length; i++){
   div[i].style.display = "flex";
@@ -131,9 +115,6 @@ var btn = document.querySelector("#btn-edu");
 btn.addEventListener("click", function() {
     var div = document.querySelectorAll(".dev");
     var edu = document.querySelectorAll(".edu");
-    var nn = document.querySelector(".criativite");
-
-    nn.style.display = "none";
 
 for (i = 0; i < div.length; i++){
   div[i].style.display = "none";
@@ -148,10 +129,6 @@ var btn = document.querySelector("#btn-all");
 btn.addEventListener("click", function() {
     var div = document.querySelectorAll(".dev");
     var edu = document.querySelectorAll(".edu");
-    var nn = document.querySelector(".criativite");
-
-    nn.style.display = "flex";
-
 for (i = 0; i < div.length; i++){
   div[i].style.display = "flex";
 }
@@ -160,3 +137,31 @@ for (i = 0; i < edu.length; i++){
   edu[i].style.display = "flex";
 }
 });
+
+
+var btn = document.querySelectorAll(".game");
+var a = Math.floor(Math.random() * 14);
+var b = Math.floor(Math.random() * 14);
+var c = Math.floor(Math.random() * 14);
+
+
+var div = document.querySelectorAll(".game");
+
+  btn[a].addEventListener("click", function() {
+    btn[a].style.backgroundImage = "url('/img/pixel_art.png')";
+    btn[a].style.backgroundRepeat = "no-repeat";
+    btn[a].style.fontSize = "0px";
+
+  });
+
+  btn[b].addEventListener("click", function() {
+    btn[b].style.backgroundImage = "url('/img/bomb.png')";
+    btn[b].style.backgroundRepeat = "no-repeat";
+    btn[b].style.fontSize = "0px";
+  });
+
+  btn[c].addEventListener("click", function() {
+    btn[c].style.backgroundImage = "url('/img/bomb.png')";
+    btn[c].style.backgroundRepeat = "no-repeat";
+    btn[c].style.fontSize = "0px";
+  });

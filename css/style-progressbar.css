@@ -11,12 +11,12 @@
 
 .container-bar .card {
   position: relative;
-  width: 200px;
+  width: 150px;
   /* background: linear-gradient(0deg, #1b1b1b, #222, #1b1b1b); */
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 300px;
+  height: 220px;
   border-radius: 4px;
   text-align: center;
   overflow: hidden;
@@ -75,7 +75,7 @@
 .text {
   position: relative;
   color: #777;
-  margin-top: 20px;
+  margin-top: 8px;
   font-weight: 700;
   font-size: 18px;
   letter-spacing: 2px;
@@ -112,19 +112,39 @@ svg circle:nth-child(2) {
 .card:nth-child(1) svg circle:nth-child(2) {
   stroke-dashoffset: calc(440 - (440 * 68) / 100);
   stroke: #ff0000;
+  transition: .5s;
 }
 
 .card:nth-child(2) svg circle:nth-child(2) {
   stroke-dashoffset: calc(440 - (440 * 60) / 100);
   stroke: rgb(212, 78, 78);
+  transition: .5s;
 }
 
 .card:nth-child(3) svg circle:nth-child(2) {
   stroke-dashoffset: calc(440 - (440 * 73) / 100);
   stroke: #ffcbcb;
+  transition: .5s;
 }
 
 .card:nth-child(4) svg circle:nth-child(2) {
   stroke-dashoffset: calc(440 - (440 * 95) / 100);
   stroke: #ffffff;
+  transition: .5s;
+}
+
+.card:nth-child(1):hover svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * -68) / 100);
+}
+
+.card:nth-child(2):hover svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * -60) / 100);
+}
+
+.card:nth-child(3):hover svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * -73) / 100);
+}
+
+.card:nth-child(4):hover svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * -95) / 100);
 }
