@@ -138,30 +138,3 @@ for (i = 0; i < edu.length; i++){
 }
 });
 
-
-var btn = document.querySelectorAll(".game");
-var a = Math.floor(Math.random() * 14);
-var b = Math.floor(Math.random() * 14);
-var c = Math.floor(Math.random() * 14);
-
-
-var div = document.querySelectorAll(".game");
-
-  btn[a].addEventListener("click", function() {
-    btn[a].style.backgroundImage = "url('/img/pixel_art.png')";
-    btn[a].style.backgroundRepeat = "no-repeat";
-    btn[a].style.fontSize = "0px";
-
-  });
-
-  btn[b].addEventListener("click", function() {
-    btn[b].style.backgroundImage = "url('/img/bomb.png')";
-    btn[b].style.backgroundRepeat = "no-repeat";
-    btn[b].style.fontSize = "0px";
-  });
-
-  btn[c].addEventListener("click", function() {
-    btn[c].style.backgroundImage = "url('/img/bomb.png')";
-    btn[c].style.backgroundRepeat = "no-repeat";
-    btn[c].style.fontSize = "0px";
-  });
