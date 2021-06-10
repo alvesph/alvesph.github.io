@@ -10,7 +10,7 @@ btn[a].addEventListener("click", function() {
   if (life === "on") {
     btn[a].style.backgroundImage = "url('/img/logoGame.png')";
     btn[a].style.color = "brown";
-    btn[a].style.backgroundColor = "white";
+    // btn[a].style.backgroundColor = "white";
     btn[a].style.borderRadius = "15px";
     btn[a].style.backgroundRepeat = "no-repeat";
     
@@ -32,7 +32,7 @@ btn[a].addEventListener("click", function() {
     setTimeout(function(){
       btn[a].style.backgroundImage = "";
       btn[a].style.color = "white";
-      btn[a].style.backgroundColor = "black";
+      // btn[a].style.backgroundColor = "black";
       btn[a].style.borderRadius = "0px";
     }, 10000);
   }

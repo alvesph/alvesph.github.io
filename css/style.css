@@ -10,7 +10,7 @@
 
     --colorHead: rgb(0, 0, 0);
     --colorMenu: rgb(0, 0, 0);
-    --colorBanner: #222127;
+    --colorBanner: #2f2e36;
     --colorContainer: black;
 
     --colortxtTitle: rgb(255, 255, 254);
@@ -272,6 +272,8 @@ section {
     background-color: var(--colorBanner);
     justify-content: center;
     align-items: center;
+    
+    background-image: url(/img/textura.png);
 }
 
 
@@ -699,6 +701,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: .5s;
 
     transition-property: background-color, border-radius;
     transition-duration: .5s;
@@ -750,11 +753,11 @@ img {
 }
 
 .animation-cub > div:hover {
-    /* background-image: url(/img/pixel_art.png); */
-    font-size: 0px;
     cursor: pointer;
-    background-color: white;
+    color: white;
     border-radius: 0px;
+    transform: scale(1.1, 1.1);
+    transition: .5s;
 }
 
 @keyframes move {
